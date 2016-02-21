@@ -4,7 +4,8 @@ title: DMAL Blog!
 tagline: a new world...
 ---
 {% include JB/setup %}
-
+## Introduction
+something will show up here :)
 
 ## Post List
 
