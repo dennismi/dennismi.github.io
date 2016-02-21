@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: front_page
 title: DMAL Blog
 ---
 {% include JB/setup %}
