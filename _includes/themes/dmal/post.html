@@ -1,0 +1,87 @@
+<article class="post">
+  <header class="page-header">
+    <h1 class="post-title">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+    <section class="post-meta">
+      <time class="post-date">
+        <span>{{ page.date | date_to_long_string }}</span>
+      </time>
+    </section>
+  </header>
+
+  <section class="row post-full">
+    <div class="col-xs-12">
+
+
+      <section class="content">
+        {{ content }}
+      </section>
+      <!-- content -->
+      {% unless page.tags == empty %}
+      <div class="tag_box inline">
+        <span>Tags: {% assign tags_list = page.tags %}{% include JB/inline_tags_list %}</span>
+      </div>
+      {% endunless %}
+      <div class="post-footer">
+        <figure class="author-image">
+          <a class="img" href="/archive.html" style="background-image: url(//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Dennis Micheelsen's Picture</span></a>
+        </figure>
+      </div>
+
+      <section class="author">
+        <h4>{{ site.author.name }}</h4>
+        <div class="author-meta">
+          {{ site.author.meta }}
+        </div>
+      </section>
+
+
+<aside class="read-next">
+   {% if page.previous %}
+   <a class="read-next-story prev no-cover"  href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">
+       <div class="post">
+            <h2>{{ page.previous.title }}</h2>
+            <p>{{ page.previous.title }}</p>
+            <!--<p>{{ page.previous.excerpt }}</p>-->
+        </div>
+    </a>
+    {% else %}
+    <a class="read-next-story prev no-cover">
+       &nbsp;
+    </a>
+   {% endif %}
+   {% if page.next %}
+    <a class="read-next-story no-cover" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
+        <div class="post">
+            <h2>{{ page.next.title }}</h2>
+            <p>{{ page.next.title }}</p>
+            <!--<p>{{ page.next.excerpt }}</p>-->
+        </div>
+    </a>
+    {% else %}
+    <a class="read-next-story no-cover">
+       &nbsp;
+    </a>
+    {% endif %}
+  
+</aside>
+
+      <hr>
+      <!--<ul class="pagination">
+        {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
+        {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+        {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+        {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+        {% else %}
+        <li class="next disabled"><a>Next &rarr;</a> {% endif %}
+      </ul>-->
+      <hr> {% include JB/comments %}
+    </div>
+  </section>
+</article>
+
+{% unless page.categories == empty %} in {% assign categories_list = page.categories %} {% include JB/inline_categories_list
+%} {% endunless %} {{ page.permalink }}
