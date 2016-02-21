@@ -35,33 +35,29 @@
       </section>
 
 
-<aside class="read-next">
-   {% if page.previous %}
-   <a class="read-next-story prev no-cover" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">
-       <section class="post">
+      <aside class="read-next">
+        {% if page.previous %}
+        <a class="read-next-story prev no-cover" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">
+          <section class="post">
             <h2>{{ page.previous.title }}</h2>
             <p>{{ page.previous.excerpt | strip_html }}</p>
             <!--<p>{{ page.previous.excerpt }}</p>-->
-        </section>
-    </a>
-    {% else %}
-    <a class="read-next-story prev no-cover">
+          </section>
+        </a>
+        {% else %}
+        <a class="read-next-story prev no-cover">
        &nbsp;
-    </a>
-   {% endif %}
-   {% if page.next %}
-    <a class="read-next-story no-cover" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
-        <section class="post">
+    </a> {% endif %} {% if page.next %}
+        <a class="read-next-story no-cover" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
+          <section class="post">
             <h2>{{ page.next.title }}</h2>
             <p>{{ page.next.excerpt | strip_html }}</p>
             <!--<p>{{ page.next.excerpt }}</p>-->
-        </section>
-    </a>
-    {% endif %}
-  
-</aside>
+          </section>
+        </a>
+        {% endif %}
 
-      <hr>
+      </aside>
       <!--<ul class="pagination">
         {% if page.previous %}
         <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
@@ -74,7 +70,7 @@
         {% else %}
         <li class="next disabled"><a>Next &rarr;</a> {% endif %}
       </ul>-->
-      <hr> {% include JB/comments %}
+      {% include JB/comments %}
     </div>
   </section>
 </article>
