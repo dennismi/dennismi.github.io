@@ -1,20 +1,21 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+#permalink: /:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highligther: 'pygments'
+#highlighter: 'rouge'
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 title : DMAL Blog
-tagline: ...
+tagline: I am using this as a journal of my exploration of life (or atleast my professional life)
 author :
   name : Dennis Micheelsen
   email : dennis.micheelsen@gmail.com
   github : dennismi
   twitter : dennismi
+  gravatar : '4a15382e0aa463633427cd4da2443caa'
  # feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
@@ -127,4 +128,12 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+  
+defaults:
+-
+  scope: 
+   path: ""
+  values:
+   theme_name: "dmal"
+   
   

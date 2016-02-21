@@ -1,18 +1,13 @@
 ---
 layout: page
-title: DMAL Blog!
-tagline: a new world...
-theme_name : bootstrap-3
+title: DMAL Blog
 ---
 {% include JB/setup %}
-## Introduction
-something will show up here :)
 
-## Post List
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><h3>{{ post.date | date_to_string }} &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-    {{ post.excerpt }} </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+<article>
+<header class="post-header"><h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2></header>
+<section class="post-excerpt">{{ post.excerpt }}</section>
+<footer class="post-meta"><img class="author-thumb" src="//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=250&d=mm&r=x" alt="{{ site.author.name }}">{{ site.author.name }} in {% assign tags_list = post.tags %}{% include JB/inline_tags_list %}</footer> 
+</article>
+{% endfor %}

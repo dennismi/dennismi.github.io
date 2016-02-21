@@ -10,7 +10,8 @@ CONFIG = {
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
   'post_ext' => "md",
-  'theme_package_version' => "0.1.0"
+  'theme_package_version' => "0.1.0",
+  'theme_name' => "dmal"
 }
 
 # Path configuration helper
@@ -59,7 +60,7 @@ task :post do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  
+    theme_name = CONFIG["theme_name"]
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -68,6 +69,7 @@ task :post do
     post.puts 'description: ""'
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
+    post.puts "theme_name: #{theme_name}"
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
