@@ -37,12 +37,12 @@
 
 <aside class="read-next">
    {% if page.previous %}
-   <a class="read-next-story prev no-cover"  href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">
-       <div class="post">
+   <a class="read-next-story prev no-cover" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">
+       <section class="post">
             <h2>{{ page.previous.title }}</h2>
-            <p>{{ page.previous.title }}</p>
+            <p>{{ page.previous.excerpt | strip_html }}</p>
             <!--<p>{{ page.previous.excerpt }}</p>-->
-        </div>
+        </section>
     </a>
     {% else %}
     <a class="read-next-story prev no-cover">
@@ -51,15 +51,11 @@
    {% endif %}
    {% if page.next %}
     <a class="read-next-story no-cover" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
-        <div class="post">
+        <section class="post">
             <h2>{{ page.next.title }}</h2>
-            <p>{{ page.next.title }}</p>
+            <p>{{ page.next.excerpt | strip_html }}</p>
             <!--<p>{{ page.next.excerpt }}</p>-->
-        </div>
-    </a>
-    {% else %}
-    <a class="read-next-story no-cover">
-       &nbsp;
+        </section>
     </a>
     {% endif %}
   
