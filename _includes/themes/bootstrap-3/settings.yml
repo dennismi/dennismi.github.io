@@ -1,2 +1,1 @@
-theme :
-  name : bootstrap-3
+theme_name : 'bootstrap-3'

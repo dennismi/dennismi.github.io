@@ -4,6 +4,7 @@ title: "First post with rake"
 description: ""
 category: General
 tags: [initial]
+theme_name: bootstrap-3
 ---
 {% include JB/setup %}
 ### Hurrayy..

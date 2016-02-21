@@ -2,6 +2,7 @@
 layout: page
 title: DMAL Blog!
 tagline: a new world...
+theme_name : bootstrap-3
 ---
 {% include JB/setup %}
 ## Introduction
@@ -11,7 +12,7 @@ something will show up here :)
 
 <ul class="posts">
   {% for post in site.posts %}
-    <li><h3>{{ post.date | date_to_string }} &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3><br/>
-    {{ post.content }} </li>
+    <li><h3>{{ post.date | date_to_string }} &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+    {{ post.excerpt }} </li>
   {% endfor %}
 </ul>

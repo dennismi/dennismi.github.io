@@ -141,6 +141,7 @@ namespace :theme do
         else
           page.puts "---"
           page.puts "layout: default"
+          #page.puts File.read(settings_file) if File.exist?(settings_file)
           page.puts "---"
         end 
         page.puts "{% include JB/setup %}"
