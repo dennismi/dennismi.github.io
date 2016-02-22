@@ -111,6 +111,9 @@ body {
     align-items: stretch;
     margin-top: 10rem;
 }
+.read-next a:hover{
+    text-decoration: none;
+}
 
 .read-next-story {
     display: -webkit-box;

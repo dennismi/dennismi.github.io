@@ -8,7 +8,7 @@ tags: [boxstarter,powershell,sysadmin,trials]
 {% include JB/setup %}
 <p>So I have been trying out <a href="http://www.boxstarter.org">Boxstarter</a> on few new machines (VM’s). It is a glorious tool.<br/>However, in my pursuit to keep the process lean, and not duplicate code i have made some “partial” <a href="http://www.boxstarter.org">Boxstarter</a> scripts, which include some common functionality. As an example i have a domainjoin.txt (I'm using .txt extensions for easy editing) that looks like this:</p>
 
-{% highlight powershell %}
+```powershell
 if ($host.version.major -lt 3 )  
 {
     cinst PowerShell
@@ -52,28 +52,29 @@ if ($memberStatus -eq 0 -or $memberStatus -eq 2)
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions  
 Enable-remotedesktop  
-{% endhighlight %}
+```
 
 
 <p>This will actually bring Powershell up to the latest version available in chocolatey (which is of this writing is 3.0.20121027) and join the computer to the domain, given a user entered name. This is not totally ideal in our shop but will do for now, when I’m the only user of this system :)</p>
 
 <p>With this script I could do another script which will, say, prep a developer machine. This could look something like this:  </p>
 
-{% highlight powershell %}#get the domainjoin.txt and include in script
+```powershell
+#get the domainjoin.txt and include in script
 
 #install different packages
-{% endhighlight %}
+```
 
 <p>for now this looks like this:  </p>
 
-{% highlight powershell %}
+```powershell
 invoke-boxstarter {(new-object net.webclient).DownloadString('http://path/to/domainjoin.txt') | iex}
 
 cinst notepadplusplus  
 cinst procexp  
 cinst baretail  
 cinst fiddler4  
-{% endhighlight %}
+```
 
 <p>However this invokes <a href="http://www.boxstarter.org">Boxstarter</a> AGAIN, and this is, in my mind, less than desirable, as one suddenly have multiple instances of Boxstarter running. This may be the direction that is the correct one.</p>
 
