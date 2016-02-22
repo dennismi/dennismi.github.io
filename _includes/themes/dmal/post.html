@@ -3,7 +3,8 @@
     <h1 class="post-title">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
     <section class="post-meta">
       <time class="post-date">
-        <span>{{ page.date | date: "%b %-d, %Y" }}</span>
+        <span>{{ page.date | date: "%b %-d, %Y" }}</span>{% unless page.categories == empty %} in {% assign categories_list = page.categories %} {% include JB/inline_categories_list
+%} {% endunless %}
       </time>
     </section>
   </header>
@@ -92,5 +93,3 @@
   </section>
 </article>
 
-{% unless page.categories == empty %} in {% assign categories_list = page.categories %} {% include JB/inline_categories_list
-%} {% endunless %} {{ page.permalink }}

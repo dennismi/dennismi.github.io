@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: front_page
 title: DMAL Blog
 theme_name: dmal
 ---
 {% include JB/setup %}
 
-{% for post in site.posts limit: 5 %}
+{% for post in site.posts limit: 2 %}
 <article>
 <header class="post-header"><h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2></header>
 <section class="post-excerpt">{{ post.excerpt | strip_html }}</section>
@@ -13,5 +13,7 @@ theme_name: dmal
 <time>{{ post.date | date: "%b %-d, %Y" }}</time></footer> 
 </article>
 {% endfor %}
+<hr>
+<a href="{{ site.JB.archive_path }}">Archive</a>
 
 
