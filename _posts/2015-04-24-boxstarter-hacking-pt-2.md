@@ -2,8 +2,9 @@
 layout: post
 title: "Boxstarter hacking (pt. 2)"
 description: ""
-category: 
+category: boxstarter
 tags: [boxstarter, sysadmin, powershell, trials]
+date: 2015-04-24 15:00
 ---
 {% include JB/setup %}
 <p>So i got an answer from the boxstarter guru’s over at codeplex. Actually Matt Wrock answered himself.<br/>He told me that the code i was using like this: </p>
