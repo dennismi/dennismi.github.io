@@ -4,7 +4,6 @@ title: "Boxstarter hacking (pt. 1)"
 description: ""
 categories: boxstarter
 tags: [boxstarter,powershell,sysadmin,trials]
-date: 2015-04-24 10:00
 ---
 {% include JB/setup %}
 <p>So I have been trying out <a href="http://www.boxstarter.org">Boxstarter</a> on few new machines (VM’s). It is a glorious tool.<br/>However, in my pursuit to keep the process lean, and not duplicate code i have made some “partial” <a href="http://www.boxstarter.org">Boxstarter</a> scripts, which include some common functionality. As an example i have a domainjoin.txt (I'm using .txt extensions for easy editing) that looks like this:</p>

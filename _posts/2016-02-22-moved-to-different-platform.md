@@ -5,7 +5,6 @@ slug: "moved-to-different-platform"
 description: ""
 category: General
 tags: [trials, jekyll]
-date: 2016-02-22 23:30
 ---
 {% include JB/setup %}
 # It's alive!!!1!
