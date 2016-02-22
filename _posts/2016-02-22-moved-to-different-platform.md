@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Moved to different platform"
+title: "Moved to a different platform"
+slug: "moved-to-different-platform"
 description: ""
 category: 
 tags: [trials, jekyll]
@@ -10,4 +11,4 @@ tags: [trials, jekyll]
 Jekyll is LIVE :) and with a decent theme i might add ;)
 
 ## More to come
-I will get code hightlighting to work .. 
+I will get code hightlighting to work ..

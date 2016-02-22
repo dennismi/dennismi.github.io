@@ -3,7 +3,7 @@
     <h1 class="post-title">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
     <section class="post-meta">
       <time class="post-date">
-        <span>{{ page.date | date_to_long_string }}</span>
+        <span>{{ page.date | date: "%b %-d, %Y" }}</span>
       </time>
     </section>
   </header>
@@ -16,24 +16,41 @@
         {{ content }}
       </section>
       <!-- content -->
-      {% unless page.tags == empty %}
-      <div class="tag_box inline">
-        <span>Tags: {% assign tags_list = page.tags %}{% include JB/inline_tags_list %}</span>
-      </div>
-      {% endunless %}
-      <div class="post-footer">
+
+      <footer class="post-footer">
+        {% unless page.tags == empty %}
+        <div class="tag_box inline">
+          <span>Tags: {% assign tags_list = page.tags %}{% include JB/inline_tags_list %}</span>
+        </div>
+        {% endunless %}
         <figure class="author-image">
           <a class="img" href="/archive.html" style="background-image: url(//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Dennis Micheelsen's Picture</span></a>
         </figure>
-      </div>
+        <section class="author">
+          <h4><a href="/about">{{ site.author.name }}</a></h4>
+          <div class="author-meta">
+            {{ site.author.meta }}
+          </div>
+        </section>
+        <section class="share">
+          <a class="btn btn-social-icon btn-twitter" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"
+          href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;url={{ site.production_url }}{{ page.id }}">
+            <span class="fa fa-twitter"></span>
+          </a>
+          <a class="btn btn-social-icon btn-facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"
+          href="https://www.facebook.com/sharer/sharer.php?u={{ site.production_url }}{{ page.id }}">
+            <span class="fa fa-facebook"></span>
+          </a>
+          <a class="btn btn-social-icon btn-google" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"
+          href="https://plus.google.com/share?url={{ site.production_url }}{{ page.id }}">
+            <span class="fa fa-google"></span>
+          </a>
+          <h4>Share this post</h4>
+        </section>
 
-      <section class="author">
-        <h4>{{ site.author.name }}</h4>
-        <div class="author-meta">
-          {{ site.author.meta }}
-        </div>
-      </section>
 
+
+      </footer>
 
       <aside class="read-next">
         {% if page.previous %}

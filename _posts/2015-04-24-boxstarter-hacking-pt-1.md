@@ -8,7 +8,7 @@ tags: [boxstarter,powershell,sysadmin,trials]
 {% include JB/setup %}
 <p>So I have been trying out <a href="http://www.boxstarter.org">Boxstarter</a> on few new machines (VM’s). It is a glorious tool.<br/>However, in my pursuit to keep the process lean, and not duplicate code i have made some “partial” <a href="http://www.boxstarter.org">Boxstarter</a> scripts, which include some common functionality. As an example i have a domainjoin.txt (I'm using .txt extensions for easy editing) that looks like this:</p>
 
-```powershell
+```posh
 if ($host.version.major -lt 3 )  
 {
     cinst PowerShell
@@ -53,7 +53,6 @@ if ($memberStatus -eq 0 -or $memberStatus -eq 2)
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions  
 Enable-remotedesktop  
 ```
-
 
 <p>This will actually bring Powershell up to the latest version available in chocolatey (which is of this writing is 3.0.20121027) and join the computer to the domain, given a user entered name. This is not totally ideal in our shop but will do for now, when I’m the only user of this system :)</p>
 
