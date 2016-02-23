@@ -42,4 +42,4 @@ jekyll serve
 
 Once the command prompt tells you to hit ctrl+c to stop, do not do that :).
 
-Fireup up your favorite browser, and type in the url: http://localhost:4000 and that should display you newly created jekyll blog.
+Fire up your favorite browser, and type in the url: http://localhost:4000 and that should display you newly created jekyll blog.
