@@ -10,8 +10,8 @@ theme_name: dmal
 # Installation
 Well I am on windows so, i thought, this is gonna be hell. I have seen it before. Looks neat, but way easier to setup on a *nix machine than on windows.
 
-This however was not the case. I found [David Burela's blog](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) which details the TWO steps needed.
-Well it maybe a little bit more, due to the [chocolatey](http://www.chocolatey.org) prerequisite.
+This however was not the case. I found [David Burela's blog](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) which details the TWO steps needed.  
+Well it may be a little bit more, due to the [chocolatey](http://www.chocolatey.org) prerequisite.
 
 Just in case David Burela's blog is down, and you came here first, let me give you the steps.
 
