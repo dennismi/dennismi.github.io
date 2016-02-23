@@ -10,10 +10,10 @@ theme_name: dmal
 # Installation
 Well I am on windows so, i thought, this is gonna be hell. I have seen it before. Looks neat, but way easier to setup on a *nix machine than on windows.
 
-This however was not the case. I found [Burela's blog](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) which details the TWO steps needed.
+This however was not the case. I found [David Burela's blog](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) which details the TWO steps needed.
 Well it maybe a little bit more, due to the [chocolatey](http://www.chocolatey.org) prerequisite.
 
-Just in case Burela's blog is down, and you came here first, let me give you the steps.
+Just in case David Burela's blog is down, and you came here first, let me give you the steps.
 
 1. Have Chocolatey installed? if so jump to 4 if not continue
 1. Open command prompt in administrator mode
@@ -43,3 +43,14 @@ jekyll serve
 Once the command prompt tells you to hit ctrl+c to stop, do not do that :).
 
 Fire up your favorite browser, and type in the url: http://localhost:4000 and that should display you newly created jekyll blog.
+
+This setup make for some fast revs on the site design, and how a post is gonna look when it is published.
+
+# Conclusion
+This is perfect if you want a nice simple, and fast platform for a blog.  
+But you only want to have this setup, if you are a developer, but who isn't if they have an [GitHub](https://github.com) account :), and are not afraid of either, command line (cmd or powershell), git, and markdown.
+
+If that sounds like your kind of game, then go try it out. Just remember it is meant to be a STATIC SITE GENERATOR, it is just a bunch of HTML files, where Jekyll takes care of the plumbing.
+
+Cheers.
+
