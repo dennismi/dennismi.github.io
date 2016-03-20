@@ -2,7 +2,7 @@
 layout: page
 title: "About me"
 description: ""
-group: navigation
+group: navigation2
 tagline: ''
 ---
 {% include JB/setup %}
