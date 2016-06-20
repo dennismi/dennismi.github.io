@@ -3,6 +3,7 @@ layout: page
 title: "Lego"
 description: ""
 group: navigation
+tagline: 'A geeky lego train'
 ---
 {% include JB/setup %}
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Getting IR to work"
 description: "Lego 60051 automation arduino"
-category: 
+category: LegoAutomation
 group: LegoAutomation
 tags: [lego,arduino,60051]
 theme_name: dmal
@@ -16,7 +16,7 @@ But I have found a library for communicating with the [Lego Power Functions](htt
 
 
 # This is the full program 
-```
+{% highlight c %}
 #include <PowerFunctions.h>
 
 PowerFunctions pf(12, 0);
@@ -76,4 +76,6 @@ void FullToZero(uint8_t channel){
 }
 
 
-```
+{% endhighlight %}
+
+{% include JB/lego %}

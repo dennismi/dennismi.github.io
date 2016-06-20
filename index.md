@@ -9,7 +9,7 @@ theme_name: dmal
 <article>
 <header class="post-header"><h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2></header>
 <section class="post-excerpt">{{ post.excerpt | strip_html }}</section>
-<footer class="post-meta"><img class="author-thumb" src="//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=250&d=mm&r=x" alt="{{ site.author.name }}"><a href="/about">{{ site.author.name }}</a> in {% assign tags_list = post.tags %}{% include JB/inline_tags_list %} | 
+<footer class="post-meta"><img class="author-thumb" src="//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=50&d=px&r=x" alt="{{ site.author.name }}"><a href="/about">{{ site.author.name }}</a> in {% assign tags_list = post.tags %}{% include JB/inline_tags_list %} | 
 <time>{{ post.date | date: "%b %-d, %Y" }}</time></footer> 
 </article>
 {% endfor %}

@@ -11,9 +11,10 @@
 
   <section class="row post-full">
     <div class="col-xs-12">
-
-
       <section class="content">
+<pre>
+        {% if page.group == "LegoAutomation" %} {% include JB/lego %} {% endif %}
+        </pre>
         {{ content }}
       </section>
       <!-- content -->
@@ -25,7 +26,7 @@
         </div>
         {% endunless %}
         <figure class="author-image">
-          <a class="img" href="/archive.html" style="background-image: url(//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Dennis Micheelsen's Picture</span></a>
+          <a class="img" href="/archive.html" style="background-image: url(//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=250&amp;d=px&amp;r=x)"><span class="hidden">Dennis Micheelsen's Picture</span></a>
         </figure>
         <section class="author">
           <h4><a href="/about">{{ site.author.name }}</a></h4>
