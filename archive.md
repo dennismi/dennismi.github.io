@@ -3,7 +3,7 @@ layout: page
 title : Archive
 header : Post Archive
 group: navigation
-tagline: ''
+tagline: 'One archive to rule them all'
 ---
 {% include JB/setup %}
 
