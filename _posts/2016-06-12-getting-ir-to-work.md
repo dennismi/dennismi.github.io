@@ -8,7 +8,14 @@ tags: [lego,arduino,60051]
 theme_name: dmal
 ---
 {% include JB/setup %}
- 
+# WORK IN PROGRESS WILL GET UPDATED
+I was pondering reading the spec for the [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) remote, and creating my own library to talk to the train.    
+But I have found a library for communicating with the [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) devices.
+
+
+
+
+# This is the full program 
 ```
 #include <PowerFunctions.h>
 
@@ -27,7 +34,7 @@ void loop() {
   Serial.println(F("Running for 5 sec"));
   delay(5000);
   Serial.println(F("Slowing"));
-  FillToZero(RED);
+  FullToZero(RED);
   Serial.println(F("Stopped for 2 sec"));
   delay(2000);
   Serial.println(F("Stopped for 2 sec"));
@@ -50,7 +57,7 @@ void ZeroToFull(uint8_t channel){
   pf.single_pwm(channel,PWM_FWD7);
 }
 
-void FillToZero(uint8_t channel){
+void FullToZero(uint8_t channel){
   pf.single_pwm(channel,PWM_FWD7);
   delay(500);
   pf.single_pwm(channel,PWM_FWD6);

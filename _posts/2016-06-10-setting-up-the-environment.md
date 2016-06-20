@@ -28,4 +28,6 @@ void loop() {
 ```
 
 The comments are pretty self-explanatory. One issue here is that when coding the main loop, is the fact that the code will run in a loop.    
-This is a fact that need to be accounted for. This is especially true, if you are working in an object oriented/event driven world in your day job, like me :)
+This is a fact that need to be accounted for. This is especially true, if you are working in an object oriented/event driven world in your day job, like me :) 
+
+I am pretty sure that when i get the RFID tag reader in the loop, I can better control the flow of events. 
