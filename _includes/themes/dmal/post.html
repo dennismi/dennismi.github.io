@@ -3,8 +3,8 @@
     <h1 class="post-title">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
     <section class="post-meta">
       <time class="post-date">
-        <span>{{ page.date | date: "%b %-d, %Y" }}</span>{% unless page.categories == empty %} in {% assign categories_list = page.categories %} {% include JB/inline_categories_list
-%} {% endunless %}
+        <span>{{ page.date | date: "%b %-d, %Y" }}</span>{% comment %}{% unless page.categories == empty %} in {% assign categories_list = page.categories %} {% include JB/inline_categories_list
+%} {% endunless %}{% endcomment %}
       </time>
     </section>
   </header>
@@ -12,9 +12,11 @@
   <section class="row post-full">
     <div class="col-xs-12">
       <section class="content">
-<pre>
-        {% if page.group == "LegoAutomation" %} {% include JB/lego %} {% endif %}
-        </pre>
+        <div class="lead text-center panel panel-default">
+          <div class="panel-body">
+            {% if page.group == "LegoAutomation" %} {% include JB/lego %} {% endif %}
+          </div>
+        </div>
         {{ content }}
       </section>
       <!-- content -->

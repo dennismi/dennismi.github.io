@@ -40,17 +40,19 @@
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
 
-    <link href="{{ ASSET_PATH }}/css/bootstrap-social.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/bootstrap-social.css?body=2" rel="stylesheet" type="text/css" media="all">
 
 <!-- Custom styles -->
-    <link href="{{ ASSET_PATH }}/css/main.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/main.css?body=2" rel="stylesheet" type="text/css" media="all">
   <!-- Sticky Footer -->
     <link href="{{ ASSET_PATH }}/css/bs-sticky-footer.css" rel="stylesheet">
   </head>
 
   <body>
-    <div id="wrap">
-      <nav class="navbar navbar-default" role="navigation">
+    <!--<div id="wrap">-->
+      
+      <nav class="navbar navbar-static-top navbar-default" role="navigation">
+      <div class="container">  
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
@@ -77,13 +79,15 @@
             <button type="submit" class="btn btn-default">Submit</button>
           </form>-->
         </div><!-- /.navbar-collapse -->
+      </div> <!-- /.container-fluid -->  
       </nav>
+      
   
       <div class="container">
         {{ content }}
       </div>
 
-    </div>
+    <!--</div>-->
 
     <div id="footer">
       <div class="container">

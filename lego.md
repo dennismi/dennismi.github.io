@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Lego"
+title: "Lego Automation"
 description: ""
 group: navigation
 tagline: 'A geeky lego train'
@@ -20,13 +20,13 @@ I plan to put a RFID tag in the middle train car, to know when the train is arri
 * And some wires, and resistors to connect the different items.
 
 ## The train
-<img src="/assets/images/WP_20160612_09_53_52_Pro.jpg" style="width:50%;height:auto;">
+[<img src="/assets/images/WP_20160612_09_53_52_Pro.jpg" style="width:25%;height:auto;">]({{ site.base_path }}/assets/images/WP_20160612_09_53_52_Pro.jpg)
 
 ## The Board
-<img src="/assets/images/WP_20160612_09_54_01_Pro.jpg" style="width:50%;height:auto;">
+[<img src="/assets/images/WP_20160612_09_54_01_Pro.jpg" style="width:25%;height:auto;">]({{ site.base_path }}/assets/images/WP_20160612_09_54_01_Pro.jpg)
 
 ## The RFID tag reader.
-<img src="/assets/images/WP_20160612_09_54_11_Pro.jpg" style="width:50%;height:auto;">
+[<img src="/assets/images/WP_20160612_09_54_11_Pro.jpg" style="width:25%;height:auto;">]({{ site.base_path }}/assets/images/WP_20160612_09_54_11_Pro.jpg)
 
 # Software
 This will contain the list of software and libraries I have used.

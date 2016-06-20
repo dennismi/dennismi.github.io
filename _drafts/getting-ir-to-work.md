@@ -8,15 +8,16 @@ tags: [lego,arduino,60051]
 theme_name: dmal
 ---
 {% include JB/setup %}
-# WORK IN PROGRESS WILL GET UPDATED
+
 I was pondering reading the spec for the [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) remote, and creating my own library to talk to the train.    
-But I have found a library for communicating with the [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) devices.
+But I have found a library for communicating with [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) devices.
+It seems rather robust, so I am going for this 
 
 
 
 
 # This is the full program 
-{% highlight c %}
+```c
 #include <PowerFunctions.h>
 
 PowerFunctions pf(12, 0);
@@ -74,8 +75,6 @@ void FullToZero(uint8_t channel){
   delay(1000);
   pf.single_pwm(channel,PWM_FLT);
 }
-
-
-{% endhighlight %}
+```
 
 {% include JB/lego %}
