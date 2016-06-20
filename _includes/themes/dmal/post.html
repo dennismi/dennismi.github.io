@@ -12,11 +12,11 @@
   <section class="row post-full">
     <div class="col-xs-12">
       <section class="content">
-        <div class="lead text-center panel panel-default">
+         {% if page.group == "LegoAutomation" %}  <div class="lead text-center panel panel-default">
           <div class="panel-body">
-            {% if page.group == "LegoAutomation" %} {% include JB/lego %} {% endif %}
+          {% include JB/lego %} 
           </div>
-        </div>
+        </div>{% endif %}
         {{ content }}
       </section>
       <!-- content -->
