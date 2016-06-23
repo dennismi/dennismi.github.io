@@ -36,7 +36,7 @@ production_url : http://dennismi.github.io
 #paginate: 0
 #paginate_path: "/page:num/"
 excerpt_separator: ""
-TZ: Europe/Copenhagen
+timezone: Europe/Copenhagen
 defaults:
 -
   
