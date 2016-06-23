@@ -44,8 +44,6 @@
 
 <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/css/main.css?body=2" rel="stylesheet" type="text/css" media="all">
-  <!-- Sticky Footer -->
-    <link href="{{ ASSET_PATH }}/css/bs-sticky-footer.css" rel="stylesheet">
   </head>
 
   <body>
@@ -90,12 +88,12 @@
     <!--</div>-->
 
     <div id="footer">
-      <div class="container">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+      
+      <p>&copy; {{ site.time | date: '%Y' }} <a href="http://about.me/dennismicheelsen">{{ site.author.name }}</a>
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
-      </div>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a></p>
+      
+      
     </div>
     {% include JB/analytics %}
 

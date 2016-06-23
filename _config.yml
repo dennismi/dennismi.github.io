@@ -33,11 +33,12 @@ author :
 #
 production_url : http://dennismi.github.io
 
-paginate: 2
-paginate_path: "/page:num/"
-  
+#paginate: 0
+#paginate_path: "/page:num/"
+excerpt_separator: ""
 defaults:
 -
+  
  scope: 
   path: ""
  values:

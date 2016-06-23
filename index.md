@@ -7,15 +7,15 @@ theme_name: dmal
 
 {% for post in site.posts limit: 5 %}
 <article>
-<header class="post-header"><h2 class="post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2></header>
-<section class="post-excerpt">{{ post.excerpt | strip_html }}</section>
-<footer class="post-meta"><img class="author-thumb" src="//www.gravatar.com/avatar/{{ site.author.gravatar }}?s=50&d=px&r=x" alt="{{ site.author.name }}"><a href="/about">{{ site.author.name }}</a> in {% assign tags_list = post.tags %}{% include JB/inline_tags_list %} | 
-<time>{{ post.date | date: "%b %-d, %Y" }}</time></footer> 
+<header class="post-header"><h2 class="post-title"><time>{{ post.date | date: "%b %-d, %Y" }}</time> - <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2></header>
+{% capture lastref %}{{post.date | date: "%Y-%B"}}{% endcapture %}
+<footer class="post-meta">
+{% unless post.categories == empty %} in {% assign categories_list = post.categories %} {% include JB/inline_categories_list %} {% endunless %} {% unless post.tags == empty %}Tagged: {% assign tags_list = post.tags %}{% include JB/inline_tags_list %} {% endunless %} 
+</footer>
+<hr> 
 </article>
 {% endfor %}
-<hr>
-{% if site.posts.length > 5 %}
-<a href="{{ site.JB.archive_path }}">Archive</a>
-{% endif %}
+
+<a href="{{ site.JB.archive_path }}#{{lastref}}-ref">Archive</a>
 
 

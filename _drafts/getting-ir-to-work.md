@@ -2,12 +2,11 @@
 layout: post
 title: "Getting IR to work"
 description: "Lego 60051 automation arduino"
-category: LegoAutomation
+category: "Lego Automation"
 group: LegoAutomation
 tags: [lego,arduino,60051]
 theme_name: dmal
 ---
-{% include JB/setup %}
 
 I was pondering reading the spec for the [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) remote, and creating my own library to talk to the train.    
 But I have found a library for communicating with [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) devices.

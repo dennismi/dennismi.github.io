@@ -3,8 +3,8 @@
     <h1 class="post-title">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
     <section class="post-meta">
       <time class="post-date">
-        <span>{{ page.date | date: "%b %-d, %Y" }}</span>{% comment %}{% unless page.categories == empty %} in {% assign categories_list = page.categories %} {% include JB/inline_categories_list
-%} {% endunless %}{% endcomment %}
+        <span>{{ page.date | date: "%b %-d, %Y" }}</span>{% unless page.categories == empty %} in {% assign categories_list = page.categories %} {% include JB/inline_categories_list
+%} {% endunless %}
       </time>
     </section>
   </header>
@@ -12,11 +12,6 @@
   <section class="row post-full">
     <div class="col-xs-12">
       <section class="content">
-         {% if page.group == "LegoAutomation" %}  <div class="lead text-center panel panel-default">
-          <div class="panel-body">
-          {% include JB/lego %} 
-          </div>
-        </div>{% endif %}
         {{ content }}
       </section>
       <!-- content -->
@@ -55,14 +50,15 @@
 
 
       </footer>
+      </div>
+      </section>
+</article>
 
       <aside class="read-next">
         {% if page.previous %}
         <a class="read-next-story prev no-cover" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">
           <section class="post">
             <h2>{{ page.previous.title }}</h2>
-            <p>{{ page.previous.excerpt | strip_html }}</p>
-            <!--<p>{{ page.previous.excerpt }}</p>-->
           </section>
         </a>
         {% else %}
@@ -92,7 +88,7 @@
         <li class="next disabled"><a>Next &rarr;</a> {% endif %}
       </ul>-->
       {% include JB/comments %}
-    </div>
-  </section>
-</article>
+    
+
+
 

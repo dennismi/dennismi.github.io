@@ -2,13 +2,13 @@
 layout: post
 title: "Setting up the environment"
 description: "Lego 60051 automation arduino"
-category: LegoAutomation
+category: "Lego Automation"
 group: LegoAutomation
 tags: [lego,arduino,60051]
 theme_name: dmal
 ---
 {% include JB/setup %}
-
+# Setting up an development environment
 This is fairly easy :) 
 
 Download the Arduino software. Install it.
