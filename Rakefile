@@ -111,7 +111,9 @@ task :publish do
 filename = ENV["filename"] || ""
 puts filename
 if filename.empty? then
-  FileList.new(CONFIG['drafts']+'/**') do |d| 
+ puts "Please sepcify a filename, like this: rake publish filename=xxx.md"
+ puts "This is list a drafts to publish"
+ FileList.new(CONFIG['drafts']+'/**') do |d| 
     puts d.pathmap("%f") 
   end
 else
