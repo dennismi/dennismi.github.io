@@ -37,6 +37,6 @@ cinst fiddler4
 cinst updates -source http://path/to/feed  
 ```
 
-<p>I could have pushed the need packages to my private feed and used that for all packages. But i don’t feel like maintaining every package might need that i did not make my self.</p>
+<p>I could have pushed the need packages to my private feed and used that for all packages. But i don’t feel like maintaining every package I might need that I did not make myself.</p>
 
 <p>This is what i have done. If not only to remind my self what i did :)</p>
