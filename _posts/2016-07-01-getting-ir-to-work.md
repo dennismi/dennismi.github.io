@@ -10,12 +10,15 @@ theme_name: dmal
 
 I was pondering reading the spec for the [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) remote, and creating my own library to talk to the train.    
 But I have found a library for communicating with [Lego Power Functions](https://github.com/jurriaan/Arduino-PowerFunctions) devices.
-It seems rather robust, so I am going for this 
+It seems rather robust, so I am going with this.
+
+However most tutorials injects a resistor between the LED and the board, but I want good range on these LEDs so I am going without. Still the range does not appear to be that amazing. Still need to do some more testing on range. 
 
 
 
 
-# This is the full program 
+
+# This is a full test program 
 ```c
 #include <PowerFunctions.h>
 
@@ -75,5 +78,10 @@ void FullToZero(uint8_t channel){
   pf.single_pwm(channel,PWM_FLT);
 }
 ```
+
+This is a good test program for a stationary train, which is lifted above the ground/tracks.
+Which equals a stationary LED and stationary train. This is fine, but in the real world, the train moves. 
+This gives me the reason to believe that the range on the LEDs is not that great. 
+But more on that later
 
 {% include JB/lego %}
