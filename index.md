@@ -1,6 +1,6 @@
 ---
 layout: front_page
-title: DMAL Blog
+title: dennismi Blog
 theme_name: dmal
 ---
 {% include JB/setup %}
