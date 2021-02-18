@@ -2,6 +2,7 @@
 layout: post
 title: "The Journey ends"
 description: ""
+group: LegoAutomation
 category: "Lego Automation"
 tags: [lego, arduino, 60051]
 theme_name: dmal
